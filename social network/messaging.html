@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Messages - Social Network</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-logo">SocialHub</div>
+    <nav>
+      <a href="feed.html">Feed</a>
+      <a href="profile.html">Profile</a>
+      <a href="messaging.html" class="active">Messages</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="messaging-container">
+    <aside class="chat-list">
+      <h2>Chats</h2>
+      <ul id="chatUsers">
+        <!-- Chat users dynamically loaded here -->
+      </ul>
+    </aside>
+
+    <section class="chat-window">
+      <h2 id="chatWith">Select a chat</h2>
+      <div id="chatMessages" class="chat-messages">
+        <!-- Messages appear here -->
+      </div>
+      <form id="messageForm" onsubmit="sendMessage(event)" style="display:none;">
+        <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/messaging.js"></script>
+</body>
+</html>
